@@ -2,7 +2,7 @@
 
 > 基于 Turbo、Rolldown、Docusaurus 的现代化工具库开发模板
 
-[English](https://github.com/JsonLee12138/turborepo-lib-rolldown/blob/README.en.md) | 中文
+[English](https://github.com/JsonLee12138/turborepo-lib-rolldown/blob/main/README.en.md) | 中文
 
 ## ✨ 特性
 
@@ -41,7 +41,7 @@ my-library/
 
 ```bash
 # 使用此模板创建新项目
-npx create-turbo@latest -e with-rolldown my-library
+npx create-turbo@latest -e https://github.com/JsonLee12138/turborepo-lib-rolldown my-library
 cd my-library
 ```
 

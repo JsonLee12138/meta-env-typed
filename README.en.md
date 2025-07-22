@@ -2,7 +2,7 @@
 
 > Modern library development template powered by Turbo, Rolldown, and Docusaurus
 
-English | [中文](https://github.com/JsonLee12138/turborepo-lib-rolldown/blob/README.md)
+English | [中文](https://github.com/JsonLee12138/turborepo-lib-rolldown/blob/main/README.md)
 
 ## ✨ Features
 
@@ -41,7 +41,7 @@ my-library/
 
 ```bash
 # Create new project using this template
-npx create-turbo@latest -e with-rolldown my-library
+npx create-turbo@latest -e https://github.com/JsonLee12138/turborepo-lib-rolldown my-library
 cd my-library
 ```
 
