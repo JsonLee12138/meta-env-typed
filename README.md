@@ -232,6 +232,7 @@ git push origin v1.0.0
 
 [MIT](./LICENSE) © [Your Name]
 
----
+## 联系我们
 
-⭐ 如果这个模板对你有帮助，请给个 Star！
+- [Discord](https://discord.gg/666U6JTCQY)
+- [QQ频道](https://pd.qq.com/s/fjwy3eo20?b=9) [![图片描述](./qq.jpg)](https://pd.qq.com/s/fjwy3eo20?b=9)

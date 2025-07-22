@@ -232,6 +232,6 @@ git push origin v1.0.0
 
 [MIT](./LICENSE) © [Your Name]
 
----
+## Contact US
 
-⭐ If this template helps you, please give it a Star!
+- [Discord](https://discord.gg/666U6JTCQY)
