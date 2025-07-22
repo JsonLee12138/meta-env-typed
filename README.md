@@ -1,73 +1,237 @@
-# Turborepo Design System starter with Changesets
+# 🚀 Turbo Library Template
 
-This is a community-maintained example. If you experience a problem, please submit a pull request with a fix. GitHub Issues will be closed.
+> 基于 Turbo、Rolldown、Docusaurus 的现代化工具库开发模板
 
-## Using this example
+[English](https://github.com/JsonLee12138/turborepo-lib-rolldown/blob/README.en.md) | 中文
 
-Run the following command:
+## ✨ 特性
 
-```sh
-npx create-turbo@latest -e with-changesets
+- 🏗️ **Monorepo 架构** - 基于 Turbo + pnpm 的高性能构建系统
+- ⚡ **极速构建** - 使用 Rolldown 实现毫秒级构建体验
+- 📚 **文档优先** - 集成 Docusaurus 3 的现代化文档站点
+- 🔧 **完善工具链** - ESLint、OxLint、Prettier、TypeScript 开箱即用
+- 📦 **多格式输出** - 自动生成 ESM、CJS、UMD 和类型声明文件
+- 🔄 **版本管理** - 基于 Changesets 的自动化版本发布
+- 🎯 **CI/CD 就绪** - GitHub Actions 配置完整的发布流程
+- 💾 **Git 工作流** - Husky + Commitizen + Lint-staged 规范化提交
+
+## 📁 项目结构
+
+```
+my-library/
+├── apps/
+│   └── docs/                # Docusaurus 文档站点
+│       ├── docs/            # 文档内容
+│       ├── blog/            # 博客文章
+│       └── src/             # 自定义组件
+├── packages/
+│   ├── core/                # 核心工具库
+│   │   ├── lib/             # 源码目录
+│   │   ├── dist/            # 构建输出
+│   │   └── types/           # 类型声明
+│   └── tsconfig/            # 共享 TypeScript 配置
+├── .changeset/              # 版本变更记录
+├── .github/workflows/       # CI/CD 配置
+└── turbo.json              # Turbo 构建配置
 ```
 
-## What's inside?
+## 🚀 快速开始
 
-This Turborepo includes the following:
+### 1. 克隆模板
 
-### Apps and Packages
-
-- `@acme/docs`: A placeholder documentation site powered by [Next.js](https://nextjs.org/)
-- `@acme/core`: core React components
-- `@acme/utils`: shared React utilities
-- `@acme/tsconfig`: shared `tsconfig.json`s used throughout the monorepo
-- `@acme/eslint-config`: ESLint preset
-
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Useful commands
-
-- `yarn build` - Build all packages and the docs site
-- `yarn dev` - Develop all packages and the docs site
-- `yarn lint` - Lint all packages
-- `yarn changeset` - Generate a changeset
-- `yarn clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
-
-### Changing the npm organization scope
-
-The npm organization scope for this design system starter is `@acme`. To change this, it's a bit manual at the moment, but you'll need to do the following:
-
-- Rename folders in `packages/*` to replace `acme` with your desired scope
-- Search and replace `acme` with your desired scope
-- Re-run `yarn install`
-
-## Versioning and Publishing packages
-
-Package publishing has been configured using [Changesets](https://github.com/changesets/changesets). Please review their [documentation](https://github.com/changesets/changesets#documentation) to familiarize yourself with the workflow.
-
-This example comes with automated npm releases setup in a [GitHub Action](https://github.com/changesets/action). To get this working, you will need to create an `NPM_TOKEN` and `GITHUB_TOKEN` in your repository settings. You should also install the [Changesets bot](https://github.com/apps/changeset-bot) on your GitHub repository as well.
-
-For more information about this automation, refer to the official [changesets documentation](https://github.com/changesets/changesets/blob/main/docs/automating-changesets.md)
-
-### npm
-
-If you want to publish package to the public npm registry and make them publicly available, this is already setup.
-
-To publish packages to a private npm organization scope, **remove** the following from each of the `package.json`'s
-
-```diff
-- "publishConfig": {
--  "access": "public"
-- },
+```bash
+# 使用此模板创建新项目
+npx create-turbo@latest -e with-rolldown my-library
+cd my-library
 ```
 
-### GitHub Package Registry
+### 2. 安装依赖
 
-See [Working with the npm registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#publishing-a-package-using-publishconfig-in-the-packagejson-file)
+```bash
+pnpm install
+```
+
+### 3. 开发模式
+
+```bash
+# 启动文档开发服务器
+pnpm dev:docs
+
+# 构建工具库
+pnpm build
+
+# 类型检查
+pnpm typecheck
+```
+
+## 🛠️ 开发工作流
+
+### 日常开发
+
+```bash
+# 启动文档站点 (http://localhost:3000)
+pnpm dev:docs
+
+# 实时构建工具库
+pnpm --filter @jsonlee/core build --watch
+
+# 代码检查
+pnpm lint
+
+# 格式化代码
+pnpm format
+```
+
+### 版本发布
+
+```bash
+# 1. 记录变更
+pnpm changeset
+
+# 2. 更新版本号
+pnpm version-packages
+
+# 3. 发布到 npm
+pnpm release
+```
+
+### Git 提交规范
+
+```bash
+# 使用 Commitizen 规范化提交
+pnpm cz
+```
+
+## 🎯 核心优势
+
+### ⚡ 极速构建体验
+
+- **Rolldown** - 基于 Rust 的超快打包器，比 Rollup 快 10x+
+- **Turbo** - 智能缓存和并行构建，增量构建秒级完成
+- **OxLint** - 比 ESLint 快 50-100x 的 Rust 代码检查器
+
+### 📦 多格式兼容
+
+自动生成多种格式以兼容不同环境：
+
+```json
+{
+  "main": "dist/cjs/index.cjs",     // CommonJS
+  "module": "dist/es/index.mjs",    // ES Module
+  "types": "types/index.d.ts",      // TypeScript
+  "exports": {                      // 现代 exports 字段
+    ".": {
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/cjs/index.cjs",
+      "types": "./types/index.d.ts"
+    }
+  }
+}
+```
+
+### 📚 文档驱动开发
+
+- **Docusaurus 3** - 现代化文档站点，支持 MDX
+- **自动部署** - GitHub Pages 自动发布文档
+- **版本同步** - 文档版本与库版本自动关联
+
+### 🔄 自动化流程
+
+- **Changesets** - 语义化版本管理
+- **GitHub Actions** - 自动化测试、构建、发布
+- **Git Hooks** - 提交前自动格式化和检查
+
+## 📖 使用技巧
+
+### 1. 自定义构建配置
+
+编辑 `packages/core/rolldown.config.ts`：
+
+```typescript
+import { defineConfig } from 'rolldown'
+
+export default defineConfig([
+  // 添加自定义构建配置
+  {
+    input: './lib/index.ts',
+    output: {
+      format: 'esm',
+      dir: 'dist/custom'
+    },
+    plugins: [
+      // 添加插件
+    ]
+  }
+])
+```
+
+### 2. 扩展文档功能
+
+```bash
+# 添加新的文档页面
+mkdir apps/docs/docs/guide
+echo "# 使用指南" > apps/docs/docs/guide/getting-started.md
+
+# 自定义主题
+pnpm --filter @jsonlee/docs swizzle @docusaurus/theme-classic Footer
+```
+
+### 3. 添加新包
+
+```bash
+# 创建新的工具包
+mkdir packages/utils
+cd packages/utils
+pnpm init
+
+# 更新 Turbo 配置以包含新包
+```
+
+### 4. 配置发布流程
+
+```bash
+# Beta 版本发布
+git tag v1.0.0-beta.1
+git push origin v1.0.0-beta.1
+
+# 正式版本发布
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+## 🔧 工具链详解
+
+### 构建工具
+
+- **Rolldown** - 下一代 JavaScript 打包器
+- **Turbo** - 高性能构建系统
+- **TypeScript** - 静态类型检查
+
+### 代码质量
+
+- **OxLint** - 超快速代码检查
+- **Prettier** - 代码格式化
+- **Husky** - Git hooks 管理
+- **Lint-staged** - 暂存文件检查
+
+### 版本管理
+
+- **Changesets** - 版本和变更日志管理
+- **Conventional Commits** - 规范化提交信息
+- **Commitizen** - 交互式提交
+
+## 🤝 贡献指南
+
+1. Fork 本项目
+2. 创建特性分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`pnpm cz`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 创建 Pull Request
+
+## 📝 许可证
+
+[MIT](./LICENSE) © [Your Name]
+
+---
+
+⭐ 如果这个模板对你有帮助，请给个 Star！

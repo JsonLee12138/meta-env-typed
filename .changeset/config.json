@@ -4,8 +4,12 @@
   "baseBranch": "main",
   "commit": false,
   "fixed": [],
-  "linked": [],
+  "linked": [["@jsonlee/core", "@jsonlee/docs"]],
   "access": "public",
   "updateInternalDependencies": "patch",
-  "ignore": ["@acme/docs"]
+  "ignore": ["@jsonlee/docs"],
+  "privatePackages": {
+    "version": true,
+    "tag": false
+  }
 }
