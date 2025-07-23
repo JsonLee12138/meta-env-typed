@@ -1,3 +1,6 @@
 {
   "extends": "@jsonlee/tsconfig/base.tsconfig.json",
+  "include": [
+    "./lib/**/*",
+  ]
 }
