@@ -14,7 +14,9 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "ci": "npm run typecheck",
-    "lint": "oxlint"
+    "oxlint": "oxlint",
+    "lint:fix": "eslint --fix .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
