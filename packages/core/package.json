@@ -2,7 +2,7 @@
   "name": "@jsonlee/core",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.cjs",
   "types": "types/index.d.ts",
   "module": "dist/es/index.mjs",
   "type": "module",
