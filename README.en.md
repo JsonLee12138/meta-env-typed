@@ -84,6 +84,28 @@ pnpm format
 
 ### Version Release
 
+#### Production Version Release
+
+```bash
+# 1. Record changes
+pnpm changeset
+
+# 2. Update version, create tag and publish tag
+pnpm tag
+```
+
+#### Beta Version Release
+
+```bash
+# 1. Enable beta mode
+pnpm cv:beta
+
+# 2. Update version, create tag and publish tag
+pnpm tag
+```
+
+#### Traditional Method (Backward Compatible)
+
 ```bash
 # 1. Record changes
 pnpm changeset
@@ -91,8 +113,11 @@ pnpm changeset
 # 2. Update version numbers
 pnpm version-packages
 
-# 3. Publish to npm
-pnpm release
+# 3. Create tag
+git tag v1.0.0
+
+# 4. Publish tag
+git push v1.0.0
 ```
 
 ### Git Commit Standards
@@ -188,6 +213,22 @@ pnpm init
 ```
 
 ### 4. Configure Publishing Workflow
+
+#### Automated Publishing (Recommended)
+
+```bash
+# Record changes
+pnpm changeset
+# Production version: auto create version, commit, and tag
+pnpm tag
+
+# Beta version: enable beta mode first
+pnpm cv:beta
+pnpm changeset  # Record changes
+pnpm tag
+```
+
+#### Manual Publishing
 
 ```bash
 # Beta version release

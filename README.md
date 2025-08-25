@@ -84,6 +84,28 @@ pnpm format
 
 ### 版本发布
 
+#### 正式版本发布
+
+```bash
+# 1. 记录变更
+pnpm changeset
+
+# 2. 更新版本号并打标签并发布标签
+pnpm tag
+```
+
+#### Beta 版本发布
+
+```bash
+# 1. 开启 beta 模式
+pnpm cv:beta
+
+# 2. 更新版本号并打标签并发布标签
+pnpm tag
+```
+
+#### 传统方式（保持兼容）
+
 ```bash
 # 1. 记录变更
 pnpm changeset
@@ -91,8 +113,11 @@ pnpm changeset
 # 2. 更新版本号
 pnpm version-packages
 
-# 3. 发布到 npm
-pnpm release
+# 3. 打tag
+git tag v1.0.0
+
+# 4. 发布tag
+git push v1.0.0
 ```
 
 ### Git 提交规范
@@ -188,6 +213,22 @@ pnpm init
 ```
 
 ### 4. 配置发布流程
+
+#### 自动化发布（推荐）
+
+```bash
+# 记录变更
+pnpm changeset
+# 正式版本：自动创建版本、提交、打标签
+pnpm tag
+
+# Beta 版本：先开启 beta 模式
+pnpm cv:beta
+pnpm changeset  # 记录变更
+pnpm tag
+```
+
+#### 手动发布
 
 ```bash
 # Beta 版本发布

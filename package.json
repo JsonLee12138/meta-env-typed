@@ -19,7 +19,9 @@
     "publish:release": "pnpm --filter=@jsonlee/core run publish:release",
     "deploy:docs": "pnpm --filter=@jsonlee/docs run deploy",
     "lint-staged": "lint-staged",
-    "cz": "cz"
+    "cz": "cz",
+    "cv:beta": "pnpm changeset pre enter beta --filter=@jsonlee/core",
+    "tag": "changeset version && git add . && git commit -m 'chore(release): version packages' && deno run -A scripts/tag.ts && git push --follow-tags"
   },
   "devDependencies": {
     "@changesets/cli": "^2.28.1",
