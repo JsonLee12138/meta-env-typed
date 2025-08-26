@@ -2,46 +2,78 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**Meta Env Typed** is a multi-build-tool plugin that automatically generates `import_meta.d.ts` files to provide complete TypeScript type support for your environment variables.
 
-## Getting Started
+## Why Meta Env Typed?
 
-Get started by **creating a new site**.
+Working with environment variables in TypeScript projects often lacks proper type safety. You might find yourself writing code like this:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```typescript
+// ❌ No type safety, prone to typos
+const apiUrl = import.meta.env.VITE_API_URL; // string | undefined
+const port = import.meta.env.VITE_PORT; // string | undefined
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+With **Meta Env Typed**, you get:
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+```typescript
+// ✅ Full type safety and IntelliSense
+const apiUrl = import.meta.env.VITE_API_URL; // 'https://api.example.com'
+const port = import.meta.env.VITE_PORT; // '3000'
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Key Features
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+- 🚀 **Automatic Generation**: Automatically generates environment variable type definitions
+- 💡 **Full TypeScript Support**: Complete IntelliSense and type checking
+- ⚡️ **Zero Configuration**: Works out of the box with sensible defaults
+- 🔒 **Type Safety**: Prevents typos and runtime errors
+- 🔄 **Auto-Updates**: Regenerates types when environment files change
+- 🛠️ **Multi-Tool Support**: Works with Vite, Rsbuild, and Rspack (coming soon)
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## Supported Build Tools
+
+| Build Tool  | Status         | Version  |
+| ----------- | -------------- | -------- |
+| **Vite**    | ✅ Supported   | v6.0.0+  |
+| **Rsbuild** | ✅ Supported   | v1.3.22+ |
+| **Rspack**  | 🚧 Coming Soon | -        |
+
+## Quick Example
+
+After installing and configuring the plugin, it automatically generates a type definition file:
+
+```typescript
+// src/import_meta.d.ts (auto-generated)
+interface ImportMetaEnv {
+  readonly VITE_API_URL: 'https://api.example.com';
+  readonly VITE_APP_TITLE: 'My Awesome App';
+  readonly VITE_PORT: '3000';
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+```
+
+Now you can use your environment variables with full type safety:
+
+```typescript
+// ✅ TypeScript knows the exact type and value
+console.log(import.meta.env.VITE_API_URL); // Type: 'https://api.example.com'
+console.log(import.meta.env.VITE_APP_TITLE); // Type: 'My Awesome App'
+
+// ✅ TypeScript will catch typos at compile time
+console.log(import.meta.env.VITE_API_URl); // ❌ Error: Property 'VITE_API_URl' does not exist
+```
+
+## Next Steps
+
+Ready to get started? Check out our [Installation Guide](./getting-started/installation) to add Meta Env Typed to your project.
+
+Or jump straight to the configuration for your build tool:
+
+- [Vite Configuration](./build-tools/vite)
+- [Rsbuild Configuration](./build-tools/rsbuild)

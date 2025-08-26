@@ -1,39 +1,36 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+import type { Config } from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Meta Env Typed',
+  tagline: 'Type-safe environment variables for TypeScript projects',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
+  url: 'https://jsonlee12138.github.io',
+  baseUrl: '/meta-env-typed/',
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/turborepo-lib-rolldown/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'JsonLee12138',
+  projectName: 'meta-env-typed',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['zh-CN', 'en'],
+    localeConfigs: {
+      'zh-Hans': {
+        label: '简体中文',
+        direction: 'ltr',
+        htmlLang: 'zh-CN',
+      },
+      'en': {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        path: 'en',
+      },
+    },
   },
 
   presets: [
@@ -42,25 +39,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          editUrl: 'https://github.com/JsonLee12138/meta-env-typed/tree/main/apps/docs/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -70,12 +49,10 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Meta Env Typed',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Meta Env Typed Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -85,9 +62,22 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          type: 'localeDropdown',
+          position: 'right',
+        },
+        {
+          position: 'right',
+          label: 'Changelogs',
+          to: '/docs/changelogs',
+        },
+        {
+          href: 'https://www.npmjs.com/package/meta-env-typed',
+          label: 'NPM',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/JsonLee12138/meta-env-typed',
           label: 'GitHub',
           position: 'right',
         },
@@ -100,8 +90,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Getting Started',
               to: '/docs/intro',
+            },
+            {
+              label: 'API Reference',
+              to: '/docs/configuration/options',
             },
           ],
         },
@@ -109,16 +103,16 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'GitHub Issues',
+              href: 'https://github.com/JsonLee12138/meta-env-typed/issues',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discord.com/invite/666U6JTCQY',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'QQ社区',
+              href: 'https://pd.qq.com/s/fjwy3eo20?b=9',
             },
           ],
         },
@@ -126,17 +120,17 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'GitHub',
+              href: 'https://github.com/JsonLee12138/meta-env-typed',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'npm',
+              href: 'https://www.npmjs.com/package/meta-env-typed',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © 2025 JsonLee12138. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

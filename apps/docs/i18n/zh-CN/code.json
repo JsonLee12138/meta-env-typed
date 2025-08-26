@@ -1,0 +1,130 @@
+{
+  "homepage.title": {
+    "message": "Meta Env Typed",
+    "description": "The homepage title"
+  },
+  "homepage.tagline": {
+    "message": "为现代 Web 应用提供类型安全的环境变量",
+    "description": "The homepage tagline"
+  },
+  "homepage.getStarted": {
+    "message": "快速开始 - 5分钟 ⏱️",
+    "description": "The get started button text"
+  },
+  "homepage.description": {
+    "message": "为现代 Web 应用提供类型安全的环境变量",
+    "description": "The homepage description for SEO"
+  },
+  "feature.easyToUse.title": {
+    "message": "易于使用",
+    "description": "Easy to use feature title"
+  },
+  "feature.easyToUse.description": {
+    "message": "Meta Env Typed 设计简单易用，只需几行配置即可为你的项目添加类型安全的环境变量支持。",
+    "description": "Easy to use feature description"
+  },
+  "feature.typeSafe.title": {
+    "message": "类型安全",
+    "description": "Type safe feature title"
+  },
+  "feature.typeSafe.description": {
+    "message": "基于 TypeScript，提供完整的类型推导和智能提示，在编译时就能发现环境变量相关的错误。",
+    "description": "Type safe feature description"
+  },
+  "feature.multiFramework.title": {
+    "message": "多框架支持",
+    "description": "Multi framework feature title"
+  },
+  "feature.multiFramework.description": {
+    "message": "支持 Vite、Rsbuild 等主流构建工具，无论你使用什么技术栈都能轻松集成。",
+    "description": "Multi framework feature description"
+  },
+  "navbar.changelog": {
+    "message": "更新日志",
+    "description": "Changelog navbar item"
+  },
+  "navbar.npm": {
+    "message": "NPM",
+    "description": "NPM navbar item"
+  },
+  "navbar.github": {
+    "message": "GitHub",
+    "description": "GitHub navbar item"
+  },
+  "footer.gettingStarted": {
+    "message": "快速开始",
+    "description": "Getting Started footer link"
+  },
+  "footer.apiReference": {
+    "message": "API 参考",
+    "description": "API Reference footer link"
+  },
+  "footer.installation": {
+    "message": "安装",
+    "description": "Installation footer link"
+  },
+  "footer.quickStart": {
+    "message": "快速开始",
+    "description": "Quick Start footer link"
+  },
+  "footer.vite": {
+    "message": "Vite 集成",
+    "description": "Vite integration footer link"
+  },
+  "footer.rsbuild": {
+    "message": "Rsbuild 集成",
+    "description": "Rsbuild integration footer link"
+  },
+  "footer.configuration": {
+    "message": "配置选项",
+    "description": "Configuration footer link"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "跳转到主要内容",
+    "description": "Skip to main content link"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "首页",
+    "description": "Breadcrumbs home link"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "面包屑导航",
+    "description": "Breadcrumbs navigation aria label"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "上一页",
+    "description": "Previous page button"
+  },
+  "theme.docs.paginator.next": {
+    "message": "下一页",
+    "description": "Next page button"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "收起侧边栏",
+    "description": "Collapse sidebar button title"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "展开侧边栏",
+    "description": "Expand sidebar button title"
+  },
+  "theme.navbar.mobileMenuButtonAriaLabel": {
+    "message": "导航菜单",
+    "description": "Mobile menu button aria label"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "本页目录",
+    "description": "TOC toggle button label"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "切换深色模式",
+    "description": "Color mode toggle aria label"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "切换到浅色模式",
+    "description": "Dark mode toggle aria label"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "切换到深色模式",
+    "description": "Light mode toggle aria label"
+  }
+}
