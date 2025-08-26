@@ -91,6 +91,8 @@
   ],
   "cSpell.words": [
     "oxlint",
-    "rolldown"
+    "rolldown",
+    "rsbuild",
+    "rspack"
   ]
 }

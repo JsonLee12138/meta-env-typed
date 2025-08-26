@@ -73,7 +73,7 @@ pnpm typecheck
 pnpm dev:docs
 
 # Build library in watch mode
-pnpm --filter @jsonlee/core build --watch
+pnpm --filter meta-env-typed build --watch
 
 # Code linting
 pnpm lint

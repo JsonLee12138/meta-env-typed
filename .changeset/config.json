@@ -4,7 +4,7 @@
   "baseBranch": "main",
   "commit": false,
   "fixed": [],
-  "linked": [["@jsonlee/core", "@jsonlee/docs"]],
+  "linked": [["meta-env-typed", "@jsonlee/docs"]],
   "access": "public",
   "updateInternalDependencies": "patch",
   "ignore": ["@jsonlee/docs"],

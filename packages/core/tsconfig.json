@@ -1,5 +1,8 @@
 {
   "extends": "@jsonlee/tsconfig/base.tsconfig.json",
+  "compilerOptions": {
+    "resolveJsonModule": true
+  },
   "include": [
     "./lib/**/*",
     "./__test__/**/*"

@@ -73,7 +73,7 @@ pnpm typecheck
 pnpm dev:docs
 
 # 实时构建工具库
-pnpm --filter @jsonlee/core build --watch
+pnpm --filter meta-env-typed build --watch
 
 # 代码检查
 pnpm lint

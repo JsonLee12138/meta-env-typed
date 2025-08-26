@@ -1,0 +1,9 @@
+interface ImportMetaEnv {
+  {{#each properties}}
+  readonly {{key}}: {{type}}{{#if ../semi}};{{/if}}
+  {{/each}}
+}
+
+declare interface ImportMeta {
+  readonly env: ImportMetaEnv{{#if semi}};{{/if}}
+}
