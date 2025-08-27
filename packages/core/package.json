@@ -1,10 +1,19 @@
 {
   "name": "meta-env-typed",
   "type": "module",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A vite plugin to generate import_meta.d.ts file for env typed.",
   "author": "JsonLee12138",
   "license": "MIT",
+  "homepage": "https://github.com/JsonLee12138/meta-env-typed",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JsonLee12138/meta-env-typed"
+  },
+  "bugs": {
+    "url": "https://github.com/JsonLee12138/meta-env-typed/issues",
+    "email": "lijunsong2@gmail.com"
+  },
   "keywords": [
     "vite",
     "rsbuild",

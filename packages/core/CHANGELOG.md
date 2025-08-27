@@ -1,5 +1,11 @@
 # meta-env-typed
 
+## 2.0.1
+
+### Patch Changes
+
+- 更新文档
+
 ## 2.0.0
 
 ### Major Changes

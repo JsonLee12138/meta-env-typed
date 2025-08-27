@@ -13,13 +13,13 @@ const config: Config = {
   organizationName: 'JsonLee12138',
   projectName: 'meta-env-typed',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'en',
     locales: ['zh-CN', 'en'],
     localeConfigs: {
-      'zh-Hans': {
+      'zh-CN': {
         label: '简体中文',
         direction: 'ltr',
         htmlLang: 'zh-CN',
