@@ -105,9 +105,6 @@ importers:
       '@rspack/core':
         specifier: '>=1.3.15'
         version: 1.4.11(@swc/helpers@0.5.17)
-      cp:
-        specifier: ^0.2.0
-        version: 0.2.0
       handlebars:
         specifier: ^4.7.8
         version: 4.7.8
@@ -121,6 +118,9 @@ importers:
       '@vitest/ui':
         specifier: ^2.0.0
         version: 2.1.9(vitest@2.1.9)
+      cp:
+        specifier: ^0.2.0
+        version: 0.2.0
       happy-dom:
         specifier: ^14.0.0
         version: 14.12.3
@@ -6824,7 +6824,7 @@ packages:
 
   /cp@0.2.0:
     resolution: {integrity: sha512-4ftCvShHjIZG/zzomHyunNpBof3sOFTTmU6s6q9DdqAL/ANqrKV3pr6Z6kVfBI4hjn59DFLImrBqn7GuuMqSZA==}
-    dev: false
+    dev: true
 
   /cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}

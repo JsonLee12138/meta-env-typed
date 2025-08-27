@@ -1,5 +1,11 @@
 # meta-env-typed
 
+## 2.0.2
+
+### Patch Changes
+
+- 优化依赖问题
+
 ## 2.0.1
 
 ### Patch Changes

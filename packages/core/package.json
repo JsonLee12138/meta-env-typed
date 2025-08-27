@@ -1,7 +1,7 @@
 {
   "name": "meta-env-typed",
   "type": "module",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A vite plugin to generate import_meta.d.ts file for env typed.",
   "author": "JsonLee12138",
   "license": "MIT",
@@ -75,12 +75,12 @@
     "vite": ">=6.0.0"
   },
   "dependencies": {
-    "cp": "^0.2.0",
     "handlebars": "^4.7.8"
   },
   "devDependencies": {
     "@jsonlee/tsconfig": "workspace:^",
     "@vitest/ui": "^2.0.0",
+    "cp": "^0.2.0",
     "happy-dom": "^14.0.0",
     "oxlint": "^1.8.0",
     "rolldown": "1.0.0-beta.29",
